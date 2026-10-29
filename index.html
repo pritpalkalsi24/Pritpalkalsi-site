@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Pritpal Kalsi — author, filmmaker and founder of Timbuktu Media. Books, films and companies in one catalogue of works.">
+<meta property="og:title" content="PritpalKalsi">
+<meta property="og:description" content="Books. Films. Companies. One story.">
+<title>PritpalKalsi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap">
+<style>
+/* Catalogue index: stark white page, giant black type, one highlighter accent. Single deliberate light look. */
+:root{
+  --bg:#FFFFFF; --ink:#0A0A0A; --muted:#555555; --tile:#E9E9E6; --hl:#FFE600; --onink:#FFFFFF; --soft:#BDBDBD;
+  --display:'Archivo Black', 'Arial Black', Impact, sans-serif;
+  --mono:'Space Mono', ui-monospace, 'Courier New', monospace;
+  --body:'Space Grotesk', system-ui, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+a{color:var(--ink)} a:hover{color:var(--muted)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px, env(safe-area-inset-left, 0px));padding-right:max(32px, env(safe-area-inset-right, 0px))}}
+.mono{font-family:var(--mono);font-size:13px}
+mark{background:var(--hl);color:var(--ink);padding:0 .08em}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:14px;border-top:2px solid var(--ink)}
+
+header.wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;border-bottom:2px solid var(--ink)}
+header a{text-decoration:none}
+header nav{display:flex;flex-wrap:wrap;gap:24px}
+
+.hero{padding-block:56px 72px}
+h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(52px,10.5vw,168px);line-height:.9;letter-spacing:-.035em;text-transform:uppercase}
+.about{display:flex;flex-wrap:wrap;gap:32px 56px;margin-top:56px;padding-top:28px;border-top:2px solid var(--ink);align-items:flex-start}
+.portrait{flex:0 0 200px;max-width:100%;aspect-ratio:1/1;background:var(--tile);display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.about .tag{flex:0 1 240px;margin:0;font-family:var(--mono);font-size:14px;line-height:1.7}
+.about .lede{flex:1 1 320px;min-width:0;margin:0;font-size:20px;line-height:1.55;max-width:62ch}
+
+.featured{padding-bottom:88px}
+.featured .bar{border-bottom:1px solid var(--ink);margin-bottom:28px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px}
+.fcard{text-decoration:none;display:flex;flex-direction:column;gap:14px}
+.cover{aspect-ratio:4/3;max-width:100%;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.cover .t{font-family:var(--display);line-height:.88;letter-spacing:-.03em;text-transform:uppercase}
+.fcard p{margin:0;font-size:17px;line-height:1.5}
+.fcard u{font-family:var(--mono);font-size:13px}
+
+.works{padding-bottom:104px}
+.works .bar{border-bottom:2px solid var(--ink)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;padding-block:18px;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--ink)}
+.row:hover .rt{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px}
+.thumb{flex:0 0 96px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;font-family:var(--display);font-size:13px;line-height:.95;text-transform:uppercase}
+.rn{flex:0 0 96px}
+.rt{flex:1 1 280px;min-width:0;font-family:var(--display);font-size:clamp(26px,3.4vw,46px);line-height:1.02;letter-spacing:-.015em;text-transform:uppercase}
+.rk{flex:0 0 150px}
+.rr{flex:0 0 130px}
+
+.band{background:var(--ink);color:var(--onink)}
+.band .wrap{padding-block:112px}
+.band .lbl{margin:0 0 24px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.band .big{margin:0;font-family:var(--display);font-size:clamp(40px,7vw,104px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+
+.contact{padding-block:96px;display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between;align-items:flex-end}
+.contact h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(38px,5.5vw,80px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+form{flex:1 1 380px;min-width:0;max-width:560px;display:flex;flex-direction:column;gap:10px}
+.field{display:flex;flex-wrap:wrap;gap:12px}
+input{flex:1 1 220px;min-width:0;min-height:56px;padding:0 4px;border:0;border-bottom:2px solid var(--ink);background:transparent;font-family:var(--mono);font-size:17px;color:var(--ink)}
+button{min-height:56px;padding:0 28px;border:2px solid var(--ink);background:var(--hl);color:var(--ink);font-family:var(--mono);font-size:15px;font-weight:700;text-transform:uppercase;cursor:pointer}
+button:hover{background:var(--ink);color:var(--hl)}
+.note{margin:6px 0 0;color:var(--muted)}
+#status{margin:0;min-height:1.4em;font-family:var(--mono);font-size:13px}
+
+footer.wrap{padding-block:24px 40px;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer nav{display:flex;flex-wrap:wrap;gap:20px}
+footer a{text-decoration:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap mono">
+  <a href="#top"><b>PRITPALKALSI — CATALOGUE OF WORKS</b></a>
+  <nav aria-label="Main">
+    <a href="#works">Works (05)</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="top" class="wrap hero">
+  <h1>Books.<br>Films.<br>Companies.<br><mark>One story.</mark></h1>
+  <div id="about" class="about">
+    <div class="portrait">[Portrait, black and white]</div>
+    <p class="tag">(Author, filmmaker, entrepreneur. Founder of Timbuktu Media. Based in India.)</p>
+    <p class="lede">Books that argue. Films that linger. Companies that put stories in front of people. Every project gets a catalogue number. Here is everything so far.</p>
+  </div>
+</section>
+
+<section class="wrap featured" aria-label="Now launching">
+  <div class="bar mono"><span>Now launching</span><span>PK — 001 / PK — 002</span></div>
+  <div class="fgrid">
+    <a class="fcard" href="#works">
+      <div class="cover" style="background:var(--hl);color:var(--ink)">
+        <span class="mono">PK — 001 / Book</span>
+        <span class="t" style="font-size:clamp(44px,6vw,88px)">MLM<br>Zombies</span>
+        <span class="mono" style="font-size:12px">[Cover]</span>
+      </div>
+      <p>A satire on the cult psychology inside network marketing. <u>Coming soon →</u></p>
+    </a>
+    <a class="fcard" href="#works">
+      <div class="cover" style="background:var(--ink);color:var(--onink)">
+        <span class="mono">PK — 002 / Book</span>
+        <span class="t" style="font-size:clamp(40px,5.4vw,80px)">Used<br>Abused<br>Misused</span>
+        <span class="mono" style="font-size:12px">[Cover]</span>
+      </div>
+      <p>How Bhagat Singh’s legacy gets bent to fit other people’s ideologies. <u>Coming soon →</u></p>
+    </a>
+  </div>
+</section>
+
+<section id="works" class="wrap works">
+  <div class="bar mono"><span>Index of works</span><span>Books 02 · Films 01 · Ventures 02</span></div>
+  <a class="row" href="#works"><span class="thumb" style="background:var(--hl);color:var(--ink)">MLM<br>Zombies</span><span class="rn mono">PK — 001</span><span class="rt">MLM Zombies</span><span class="rk mono">Book</span><span class="rr mono">Author ↗</span></a>
+  <a class="row" href="#works"><span class="thumb" style="background:var(--ink);color:var(--onink)">Used<br>Abused<br>Misused</span><span class="rn mono">PK — 002</span><span class="rt">Used Abused Misused</span><span class="rk mono">Book</span><span class="rr mono">Author ↗</span></a>
+  <a class="row" href="#works"><span class="thumb" style="background:var(--tile);color:var(--muted)">[Still]</span><span class="rn mono">PK — 003</span><span class="rt">[Film title]</span><span class="rk mono">Film</span><span class="rr mono">[Director] ↗</span></a>
+  <a class="row" href="#works"><span class="thumb" style="background:#2E2E2C;color:var(--onink)">Timbuktu<br>OTT</span><span class="rn mono">PK — 004</span><span class="rt">Timbuktu OTT</span><span class="rk mono">Streaming</span><span class="rr mono">Founder ↗</span></a>
+  <a class="row" href="#works"><span class="thumb" style="background:var(--bg);color:var(--ink);outline:1px solid var(--ink);outline-offset:-1px">Timbuktu<br>Press</span><span class="rn mono">PK — 005</span><span class="rt">Timbuktu Press</span><span class="rk mono">Publishing</span><span class="rr mono">Founder ↗</span></a>
+</section>
+
+<section class="band" aria-label="How I work">
+  <div class="wrap">
+    <p class="lbl mono">(How I work)</p>
+    <p class="big">Make the thing.<br>Tell the story.<br><mark>Repeat.</mark></p>
+  </div>
+</section>
+
+<section id="contact" class="wrap contact">
+  <div style="flex:1 1 380px;min-width:0">
+    <p class="mono" style="margin:0 0 16px">PK — 006 is in the works</p>
+    <h2>Hear about it<br>first.</h2>
+  </div>
+  <form id="signup" novalidate>
+    <label for="email" class="mono" style="text-transform:uppercase">Email address</label>
+    <div class="field">
+      <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+      <button type="submit">Subscribe →</button>
+    </div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <p class="note mono">Press, collaborations, rights: [contact email]</p>
+  </form>
+</section>
+</main>
+
+<footer class="wrap mono">
+  <span>© 2026 PritpalKalsi — Timbuktu Media Pvt. Ltd.</span>
+  <nav aria-label="Social">
+    <a href="#top">Instagram ↗</a>
+    <a href="#top">LinkedIn ↗</a>
+    <a href="#top">YouTube ↗</a>
+  </nav>
+</footer>
+
+<script>
+document.getElementById('signup').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var input = document.getElementById('email');
+  var status = document.getElementById('status');
+  var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+  status.textContent = ok
+    ? 'Preview only: sign-ups will work once the newsletter service is connected.'
+    : 'Enter a valid email address, like name@example.com.';
+});
+</script>
+</body>
+</html>
