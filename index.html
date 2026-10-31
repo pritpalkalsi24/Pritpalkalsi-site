@@ -76,9 +76,16 @@ button:hover{background:var(--ink);color:var(--hl)}
 .note{margin:6px 0 0;color:var(--muted)}
 #status{margin:0;min-height:1.4em;font-family:var(--mono);font-size:13px}
 
-footer.wrap{padding-block:24px 40px;border-top:2px solid var(--ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-footer nav{display:flex;flex-wrap:wrap;gap:20px}
-footer a{text-decoration:none}
+.ft-c{background:var(--ink);color:var(--onink)}
+.fc-in{padding-block:80px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.fc-role{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.fc-name{margin:6px 0 28px;font-family:var(--display);font-size:clamp(28px,4vw,48px);line-height:1.05;text-transform:uppercase;letter-spacing:-.01em;text-wrap:balance}
+.fc-btc{color:var(--hl)}
+.fc-soc{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:12px}
+.fc-soc a{color:var(--onink);text-decoration:none}
+.fc-soc a:hover{color:var(--hl)}
+.ft-c a:focus-visible{outline-color:var(--hl)}
+.fc-fine{margin:28px 0 0;color:var(--soft);font-size:12px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -158,13 +165,19 @@ footer a{text-decoration:none}
 </section>
 </main>
 
-<footer class="wrap mono">
-  <span>© 2026 PritpalKalsi — Timbuktu Media Pvt. Ltd.</span>
-  <nav aria-label="Social">
-    <a href="#top">Instagram ↗</a>
-    <a href="#top">LinkedIn ↗</a>
-    <a href="#top">YouTube ↗</a>
-  </nav>
+<footer class="ft-c">
+  <div class="wrap fc-in">
+    <p class="fc-role">Written &amp; directed by</p>
+    <p class="fc-name">Pritpal Kalsi</p>
+    <p class="fc-role">Website strategy, design &amp; build by</p>
+    <p class="fc-name fc-btc">Beyond The Coffee</p>
+    <nav aria-label="Social" class="mono fc-soc">
+      <a href="#top">Instagram</a>
+      <a href="#top">LinkedIn</a>
+      <a href="#top">YouTube</a>
+    </nav>
+    <p class="mono fc-fine">© 2026 PritpalKalsi · No stories were harmed in the making of this website.</p>
+  </div>
 </footer>
 
 <script>
