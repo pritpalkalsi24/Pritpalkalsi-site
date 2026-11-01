@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="About Pritpal Kalsi — author, filmmaker and founder of Timbuktu Studios, from New Delhi.">
+<meta property="og:title" content="About — PritpalKalsi">
+<meta property="og:description" content="I've always been an observer.">
+<title>About — PritpalKalsi</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap">
+<style>
+/* Catalogue index: stark white page, giant black type, one highlighter accent. Single deliberate light look. */
+:root{
+  --bg:#FFFFFF; --ink:#0A0A0A; --muted:#555555; --tile:#E9E9E6; --hl:#FFE600; --onink:#FFFFFF; --soft:#BDBDBD;
+  --display:'Archivo Black', 'Arial Black', Impact, sans-serif;
+  --mono:'Space Mono', ui-monospace, 'Courier New', monospace;
+  --body:'Space Grotesk', system-ui, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body)}
+a{color:var(--ink)} a:hover{color:var(--muted)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px, env(safe-area-inset-left, 0px));padding-right:max(32px, env(safe-area-inset-right, 0px))}}
+.mono{font-family:var(--mono);font-size:13px}
+mark{background:var(--hl);color:var(--ink);padding:0 .08em}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:14px;border-top:2px solid var(--ink)}
+
+header.wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;border-bottom:2px solid var(--ink)}
+header a{text-decoration:none}
+header nav{display:flex;flex-wrap:wrap;gap:24px}
+
+.hero{padding-block:56px 72px}
+h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(52px,10.5vw,168px);line-height:.9;letter-spacing:-.035em;text-transform:uppercase}
+.about{display:flex;flex-wrap:wrap;gap:32px 56px;margin-top:56px;padding-top:28px;border-top:2px solid var(--ink);align-items:flex-start}
+.portrait{flex:0 0 200px;max-width:100%;aspect-ratio:1/1;background:var(--tile);display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.about .tag{flex:0 1 240px;margin:0;font-family:var(--mono);font-size:14px;line-height:1.7}
+.about .lede{flex:1 1 320px;min-width:0;margin:0;font-size:20px;line-height:1.55;max-width:62ch}
+
+.featured{padding-bottom:88px}
+.featured .bar{border-bottom:1px solid var(--ink);margin-bottom:28px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px}
+.fcard{text-decoration:none;display:flex;flex-direction:column;gap:14px}
+.cover{aspect-ratio:4/3;max-width:100%;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.cover .t{font-family:var(--display);line-height:.88;letter-spacing:-.03em;text-transform:uppercase}
+.cover.has-img{position:relative;padding:0}
+.cover.has-img .tag{position:absolute;left:20px;top:18px;color:var(--ink)}
+.cover.has-img img{position:absolute;left:0;right:0;top:44px;bottom:20px;margin:auto;width:auto;height:calc(100% - 64px);max-width:calc(100% - 40px);object-fit:contain;filter:drop-shadow(0 14px 22px rgba(0,0,0,.35))}
+.thumb.has-img{padding:0;width:96px;height:96px;overflow:hidden}
+.thumb.has-img img{height:84px;width:auto;max-width:none;display:block}
+.fcard p{margin:0;font-size:17px;line-height:1.5}
+.fcard u{font-family:var(--mono);font-size:13px}
+
+.works{padding-bottom:104px}
+.works .bar{border-bottom:2px solid var(--ink)}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;padding-block:18px;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--ink)}
+.row:hover .rt{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px}
+.thumb{flex:0 0 96px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;font-family:var(--display);font-size:13px;line-height:.95;text-transform:uppercase}
+.rn{flex:0 0 96px}
+.rt{flex:1 1 280px;min-width:0;font-family:var(--display);font-size:clamp(26px,3.4vw,46px);line-height:1.02;letter-spacing:-.015em;text-transform:uppercase}
+.rk{flex:0 0 150px}
+.rr{flex:0 0 130px}
+
+.band{background:var(--ink);color:var(--onink)}
+.band .wrap{padding-block:112px}
+.band .lbl{margin:0 0 24px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.band .big{margin:0;font-family:var(--display);font-size:clamp(40px,7vw,104px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+
+.contact{padding-block:96px;display:flex;flex-wrap:wrap;gap:48px;justify-content:space-between;align-items:flex-end}
+.contact h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(38px,5.5vw,80px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+form{flex:1 1 380px;min-width:0;max-width:560px;display:flex;flex-direction:column;gap:10px}
+.field{display:flex;flex-wrap:wrap;gap:12px}
+input{flex:1 1 220px;min-width:0;min-height:56px;padding:0 4px;border:0;border-bottom:2px solid var(--ink);background:transparent;font-family:var(--mono);font-size:17px;color:var(--ink)}
+button{min-height:56px;padding:0 28px;border:2px solid var(--ink);background:var(--hl);color:var(--ink);font-family:var(--mono);font-size:15px;font-weight:700;text-transform:uppercase;cursor:pointer}
+button:hover{background:var(--ink);color:var(--hl)}
+.note{margin:6px 0 0;color:var(--muted)}
+#status{margin:0;min-height:1.4em;font-family:var(--mono);font-size:13px}
+
+.ft-c{background:var(--ink);color:var(--onink)}
+.fc-in{padding-block:80px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.fc-role{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.fc-name{margin:6px 0 28px;font-family:var(--display);font-size:clamp(28px,4vw,48px);line-height:1.05;text-transform:uppercase;letter-spacing:-.01em;text-wrap:balance}
+.fc-btc{color:var(--hl)}
+.fc-soc{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:12px}
+.fc-soc a{color:var(--onink);text-decoration:none}
+.fc-soc a:hover{color:var(--hl)}
+.ft-c a:focus-visible{outline-color:var(--hl)}
+.fc-fine{margin:28px 0 0;color:var(--soft);font-size:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.ab-hero{padding-block:56px 48px}
+.ab-hero .lbl{margin:0 0 18px;letter-spacing:.1em;text-transform:uppercase}
+.ab-hero h1{font-size:clamp(46px,8.4vw,128px);text-wrap:balance}
+.ab-body{display:flex;flex-wrap:wrap;gap:40px 64px;padding-block:40px 80px;border-top:2px solid var(--ink);align-items:flex-start}
+.ab-side{flex:0 1 300px;display:flex;flex-direction:column;gap:28px}
+.ab-side .portrait{flex:none;width:100%;max-width:300px;aspect-ratio:4/5}
+.tl{margin:0;padding:0;list-style:none;border-top:1px solid var(--ink)}
+.tl li{display:flex;gap:16px;padding-block:10px;border-bottom:1px solid var(--ink);font-family:var(--mono);font-size:13px;line-height:1.5}
+.tl b{flex:0 0 52px}
+.ab-text{flex:1 1 420px;min-width:0;max-width:66ch}
+.ab-text p{margin:0 0 22px;font-size:20px;line-height:1.62}
+.ab-text p.big{font-family:var(--display);font-size:clamp(30px,3.6vw,46px);line-height:1;letter-spacing:-.02em;text-transform:uppercase;margin:34px 0 34px}
+.why{padding-block:0 96px}
+.why .bar{border-bottom:2px solid var(--ink);margin-bottom:36px}
+.why h2{margin:0 0 28px;font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,72px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:40px 56px}
+.wcard{display:flex;gap:24px;align-items:flex-start}
+.wcard img{flex:0 0 120px;width:120px;height:auto;max-width:100%;display:block;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.wcard div{min-width:0}
+.wcard h3{margin:0 0 12px;font-family:var(--display);font-weight:400;font-size:26px;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+.wcard p{margin:0;font-size:18px;line-height:1.6}
+.band.chair{background:var(--hl);color:var(--ink)}
+.chair .lbl{color:var(--ink)!important}
+.chair mark{background:var(--ink);color:var(--hl)}
+.chair p.sub{margin:28px 0 0;max-width:56ch;font-size:20px;line-height:1.6;color:var(--ink)}
+@media (max-width:560px){.wcard{flex-direction:column}.wcard img{width:140px}}
+</style>
+</head>
+<body>
+<header class="wrap mono">
+  <a href="/"><b>PRITPALKALSI — CATALOGUE OF WORKS</b></a>
+  <nav aria-label="Main">
+    <a href="/#works">Works (05)</a>
+    <a href="/about.html" aria-current="page"><u>About</u></a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="wrap ab-hero">
+  <p class="lbl mono">(About)</p>
+  <h1>I've always been an <mark>observer.</mark></h1>
+</section>
+
+<section class="wrap ab-body">
+  <aside class="ab-side">
+    <div class="portrait">[Portrait of Pritpal Kalsi]</div>
+    <ul class="tl" aria-label="Along the way">
+      <li><b>Delhi</b><span>Grew up in New Delhi</span></li>
+      <li><b>Early</b><span>Marketing at Maruti Suzuki</span></li>
+      <li><b>1998</b><span>Joined network marketing</span></li>
+      <li><b>2001</b><span>Made music videos</span></li>
+      <li><b>2005</b><span>Started a financial services firm</span></li>
+      <li><b>2012</b><span>Diploma in filmmaking, New York Film Academy</span></li>
+      <li><b>Now</b><span>Books, films, Timbuktu Studios</span></li>
+    </ul>
+  </aside>
+  <div class="ab-text">
+    <p>I grew up in New Delhi living inside stories — the ones in books, the ones on the screen. I kept most of them to myself. Anyone who knows me well will tell you that.</p>
+    <p>Then life took the long way round. I married young and started out in marketing at Maruti Suzuki. In 1998 I joined network marketing, among its earliest pioneers in India, and went on to build my own company: more than 200 products, from electronics to consumer durables, moved by over five lakh distributors across the country. In 2005 I started a financial services firm in wealth management. Along the way I've travelled to more than 30 countries.</p>
+    <p>The stories never left. I made music videos in 2001. In 2012 I earned a diploma in filmmaking from the New York Film Academy and went on to make short films. I set out more than once, and each time life had other plans. Through all the building, a quiet sense that something was missing.</p>
+    <p class="big">So I stopped waiting.</p>
+    <p>Today I write books that question what we're told, and run Timbuktu Studios, a home for film production and publishing.</p>
+  </div>
+</section>
+
+<section class="wrap why">
+  <div class="bar mono"><span>Why these two books first</span><span>PK — 001 / PK — 002</span></div>
+  <div class="wgrid">
+    <div class="wcard">
+      <img src="images/mlm-zombies-cover.jpg" width="900" height="1350" alt="Cover of MLM Zombies">
+      <div>
+        <h3>MLM Zombies</h3>
+        <p>Because I was there. I've sat on both sides of the table: as a marketer, and as the man running the company. I watched people grow. I watched them lose their minds, lose everything, and some turn into cult figures of their own. I also met remarkable people, learned from the very best, and had the honour of mentoring thousands. I know the good, the bad and the ugly of this business.</p>
+      </div>
+    </div>
+    <div class="wcard">
+      <img src="images/used-abused-misused-cover-v3.jpg" width="900" height="1350" alt="Cover of Used Abused Misused">
+      <div>
+        <h3>Used Abused Misused</h3>
+        <p>Bhagat Singh has been my hero since childhood. I've read everything I could find about him, and about many great people since. With no one else have I felt a stronger connection. At so young an age, he turned his energy into something extraordinary: a poet, a warrior, an activist, a philosopher, a citizen, a reformer against so many of society's evils. Everyone claims him. Few have truly met him. He is an eternal hero, and this book is my attempt to return him to his own words.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band chair" aria-label="Pull up a chair">
+  <div class="wrap">
+    <p class="lbl mono">(Pull up a chair)</p>
+    <p class="big">Pour a coffee.<br>Stay a while.</p>
+    <p class="sub">I believe in sharing stories and giving them space. So take your time, and stay as long as you like. The best conversations always go beyond the coffee. Soon, so will ours: <mark>Beyond The Coffee</mark>.</p>
+  </div>
+</section>
+</main>
+
+<footer class="ft-c">
+  <div class="wrap fc-in">
+    <p class="fc-role">Written &amp; directed by</p>
+    <p class="fc-name">Pritpal Kalsi</p>
+    <p class="fc-role">Website strategy, design &amp; build by</p>
+    <p class="fc-name fc-btc">Beyond The Coffee</p>
+    <nav aria-label="Social" class="mono fc-soc">
+      <a href="/">Instagram</a>
+      <a href="/">LinkedIn</a>
+      <a href="/">YouTube</a>
+    </nav>
+    <p class="mono fc-fine">© 2026 PritpalKalsi · No stories were harmed in the making of this website.</p>
+  </div>
+</footer>
+</body>
+</html>
