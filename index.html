@@ -48,6 +48,11 @@ h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(52px,10.5
 .fcard{text-decoration:none;display:flex;flex-direction:column;gap:14px}
 .cover{aspect-ratio:4/3;max-width:100%;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
 .cover .t{font-family:var(--display);line-height:.88;letter-spacing:-.03em;text-transform:uppercase}
+.cover.has-img{position:relative;padding:0}
+.cover.has-img .tag{position:absolute;left:20px;top:18px;color:var(--ink)}
+.cover.has-img img{position:absolute;left:0;right:0;top:44px;bottom:20px;margin:auto;width:auto;height:calc(100% - 64px);max-width:calc(100% - 40px);object-fit:contain;filter:drop-shadow(0 14px 22px rgba(0,0,0,.35))}
+.thumb.has-img{padding:6px}
+.thumb.has-img img{height:100%;width:auto;display:block}
 .fcard p{margin:0;font-size:17px;line-height:1.5}
 .fcard u{font-family:var(--mono);font-size:13px}
 
@@ -114,12 +119,11 @@ button:hover{background:var(--ink);color:var(--hl)}
   <div class="bar mono"><span>Now launching</span><span>PK — 001 / PK — 002</span></div>
   <div class="fgrid">
     <a class="fcard" href="#works">
-      <div class="cover" style="background:var(--hl);color:var(--ink)">
-        <span class="mono">PK — 001 / Book</span>
-        <span class="t" style="font-size:clamp(44px,6vw,88px)">MLM<br>Zombies</span>
-        <span class="mono" style="font-size:12px">[Cover]</span>
+      <div class="cover has-img" style="background:var(--hl)">
+        <span class="mono tag">PK — 001 / Book</span>
+        <img src="images/mlm-zombies-cover.jpg" width="900" height="1350" alt="Cover of MLM Zombies: The Cult Psychology of Network Marketing by Pritpal Kalsi. Black cover reading Be your own boss, asterisk, Your boss will tell you how.">
       </div>
-      <p>A satire on the cult psychology inside network marketing. <u>Coming soon →</u></p>
+      <p>The cult psychology of network marketing, told as satire. <u>Coming soon →</u></p>
     </a>
     <a class="fcard" href="#works">
       <div class="cover" style="background:var(--ink);color:var(--onink)">
@@ -134,7 +138,7 @@ button:hover{background:var(--ink);color:var(--hl)}
 
 <section id="works" class="wrap works">
   <div class="bar mono"><span>Index of works</span><span>Books 02 · Films 01 · Ventures 02</span></div>
-  <a class="row" href="#works"><span class="thumb" style="background:var(--hl);color:var(--ink)">MLM<br>Zombies</span><span class="rn mono">PK — 001</span><span class="rt">MLM Zombies</span><span class="rk mono">Book</span><span class="rr mono">Author ↗</span></a>
+  <a class="row" href="#works"><span class="thumb has-img" style="background:var(--hl)"><img src="images/mlm-zombies-cover.jpg" width="900" height="1350" alt=""></span><span class="rn mono">PK — 001</span><span class="rt">MLM Zombies</span><span class="rk mono">Book</span><span class="rr mono">Author ↗</span></a>
   <a class="row" href="#works"><span class="thumb" style="background:var(--ink);color:var(--onink)">Used<br>Abused<br>Misused</span><span class="rn mono">PK — 002</span><span class="rt">Used Abused Misused</span><span class="rk mono">Book</span><span class="rr mono">Author ↗</span></a>
   <a class="row" href="#works"><span class="thumb" style="background:var(--tile);color:var(--muted)">[Still]</span><span class="rn mono">PK — 003</span><span class="rt">[Film title]</span><span class="rk mono">Film</span><span class="rr mono">[Director] ↗</span></a>
   <a class="row" href="#works"><span class="thumb" style="background:#2E2E2C;color:var(--onink)">Timbuktu<br>OTT</span><span class="rn mono">PK — 004</span><span class="rt">Timbuktu OTT</span><span class="rk mono">Streaming</span><span class="rr mono">Founder ↗</span></a>
